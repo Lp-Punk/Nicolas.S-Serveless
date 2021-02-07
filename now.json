@@ -1,0 +1,7 @@
+{
+  "vesrsion": 2,
+  "name": "Nicolas.S-Serveless",
+  "routes": [
+    {"src" : "/api/(.*)", "dest": "/api/index.js"}
+  ]
+}
