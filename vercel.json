@@ -1,8 +1,8 @@
 {
   "version": 2,
   "name": "Nicolas.S-Serveless",
-  "builds": [{"src": "index.js", "use": "@now/node-server"}],
   "routes": [
     {"src" : "/api/(.*)", "dest": "/api/index.js"}
   ]
+  
 }

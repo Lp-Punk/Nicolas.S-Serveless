@@ -1,7 +1,7 @@
 const express = require('express');
 const app     = express();
+/*_V!nQmT_yWtk952*/
 
-const port = 5000;
 
 
 app.get('*', (req , res) => {
@@ -9,8 +9,5 @@ app.get('*', (req , res) => {
   res.send({mensaje: "Emmita en la Web"})
 })
 
-app.listen(port, () =>{
-  console.log('hola');
-})
 
-/*module.exports = app;*/
+module.exports = app;
