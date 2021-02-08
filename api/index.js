@@ -1,6 +1,5 @@
 const express       = require("express");
-const meals        = require('./routes/meals');
-const orders        = require('./routes/orders');
+const router        = require('./routes');
 const mongoose      = require("mongoose");
 const bodyParser    = require("body-parser")
 const app           = express();
@@ -12,8 +11,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 });
 
 app.use(bodyParser.json())
-app.use('/api/meals', meals)
-app.use('/api/orders', orders)
+app.use('/', router())
+
 
 
 module.exports = app;
