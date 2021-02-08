@@ -3,6 +3,8 @@
   "name": "Nicolas.S-Serveless",
   "routes": [
     {"src" : "/.*", "dest": "api/index.js"}
-  ]
-  
+  ],
+  "env":{
+    "MONGODB_URI":"@mongodb-uri"
+  }
 }

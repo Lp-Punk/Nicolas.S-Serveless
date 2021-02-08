@@ -1,13 +1,18 @@
-const express = require('express');
-const app     = express();
-/*_V!nQmT_yWtk952*/
+const express       = require("express");
+const router        = require('./routes');
+const mongoose      = require("mongoose");
+const bodyParser    = require("body-parser")
+const app           = express();
 
 
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-app.get('*', (req , res) => {
-  console.log('Hola Mundo! Mi Primera Aplicacion Serveless');
-  res.send({mensaje: "Emmita en la Web"})
-})
+app.use(bodyParser.json())
+app.use('/', router())
+
 
 
 module.exports = app;
